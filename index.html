@@ -4,13 +4,16 @@
 <title>
 나의 게임 이모저모
 </title>
-<style>
+<style>	
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 body{
+font-family: 'Hanna', serif;
 margin:20px;
 background-image:url('background.jpg');
 background-repeat:no-repeat;
 background-attachment:fixed;
 color:white;
+line-height:2.3em;
 }
 header{
 width:100%;
@@ -18,12 +21,18 @@ text-align:center;
 text-shadow:5px 5px 5px gray;
 }
 nav{
+position:fixed;
+_position:absolute;
+_z-index:-1;
 width:20%;
 float:left;
 }
 section{
 width:80%;
-float:left;
+float:right;
+}
+article{
+margin:50px;
 }
 footer{
 text-align:center;
@@ -37,16 +46,17 @@ a:hover{
 color:gray;
 }
 table{
+border-collapse:collapse;
+margin:10px;
 width:100%;
-table-align:center;
 padding:50px;
-border:1px solid;
 text-align:center;
-
 }
 td,th{
 font-size:15pt;
-padding:5px;
+padding-left:5px;
+padding-right:5px;
+padding-top:20px;
 }
 caption{
 text-align:left;
@@ -60,6 +70,8 @@ text-align:left;
 font-size:12pt;
 }
 ul.navlist{
+font-size:15pt;
+display:inline;
 list-style-type:none;
 text-align:center;
 }
@@ -76,11 +88,24 @@ text-align:center;
 margin: 5px;
 padding: 5px;
 }
+audio{
+margin:10px;
+}
+p{
+padding:10px;
+border-style:inset;
+border-width: 3px;
+}
 </style>
 <body>
 <header>
-<img class="icon" src="icon.png">
+<img class="icon" height="150px" width="150px" src="icon.png">
 <h1>나의 게임 이모저모</h1>
+In Bioshock Infinite OST: "Will the Circle be Unbroken"
+<br>
+<audio controls autoplay>
+<source src="Will the Circle be Unbroken.mp3" type="audio/mp3">
+</audio>
 </header>
 <nav>
 <ul class="navlist">
@@ -92,14 +117,14 @@ padding: 5px;
 </nav>
 <section>
 <article id="firstsec">
-<h1>최근 나의 Gaming 생활은?</h1>
+<h2>최근 나의 Gaming 생활은?</h2>
 <figure class="steamlife">
-<img class="SteamProfile" src="SteamProfile.png" width="30%" height="5%" alt="스팀프로필 "title="스팀프로필">
-<img class="SteamProfile" src="Origin.png" width="30%" height="5%" alt="오리진" title="오리진">
-<img class="SteamProfile" src="Headset.jpg" width="30%" height="5%" alt="헤드셋" title="헤드셋">
-<img class="SteamProfile" src="Gamepad.jpg" width="30%" height="5%" alt="게임패드" title="게임패드">
-<img class="SteamProfile" src="GraphicCard.jpg" width="30%" height="5%" alt="글카" title="글카">
-<img class="SteamProfile" src="Notebook.jpg" width="30%" height="5%" alt="노트북" title="노트북">
+<img class="SteamProfile" src="SteamProfile.png" width="500px" height="300px" alt="스팀프로필 "title="스팀프로필">
+<img class="SteamProfile" src="Origin.png" width="500px" height="300px" alt="오리진" title="오리진">
+<img class="SteamProfile" src="Headset.jpg" width="500px" height="300px" alt="헤드셋" title="헤드셋">
+<img class="SteamProfile" src="Gamepad.jpg" width="500px" height="300px" alt="게임패드" title="게임패드">
+<img class="SteamProfile" src="GraphicCard.jpg" width="500px" height="300px" alt="글카" title="글카">
+<img class="SteamProfile" src="Notebook.jpg" width="500px" height="300px" alt="노트북" title="노트북">
 <figcaption>
 <나날이 늘어나는 게임과 관련 기기들>
 </figcaption>
@@ -109,11 +134,11 @@ padding: 5px;
 <hr>
 <hr>
 <article id="secondsec">
-<h1>최근의 Play & Ending<a href="#"> (클릭시 맨 위로 이동)</a></h1>
+<h2>최근의 Play & Ending<a href="#"> (클릭시 맨 위로 이동)</a></h2>
 <table id="playedgames">
-<caption>
+<h4>
 *사진을 누르면 해당 게임의 멀티미디어 관련 자료를 확인할 수 있습니다.
-</caption>
+</h4>
 <tr>
 <th nowrap></th>
 <th nowrap>게임 이름</th>
@@ -128,7 +153,7 @@ padding: 5px;
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 플레이 소감:</p>
+<p> <strong>플레이 소감:</strong><br> 플레이하다보면 디즈니 애니메이션을 보는 것 같은 느낌을 받는다. 플레이 난이도가 어렵긴 하지만 못 깰 수준은 아니라서 계속해서 도전욕구를 불러일으킨다. 장르는 슈팅 액션게임으로 분류하는게 맞겠다.</p>
 </td>
 </tr>
 <tr>
@@ -139,7 +164,7 @@ padding: 5px;
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 플레이 소감:</p>
+<p> <strong>플레이 소감:</strong><br> 곳곳에 숨어있는 보물상자 찾는 재미가 있다. 안 들어가 본 길을 모두 가보는것을 추천한다. 그리고 스토리 중간중간마다 기한 한정 이벤트가 발생하기 때문에 한 과정씩 진행할 때마다 마을에 들러 주민들과 이야기하다보면 어느새 도전과제를 완성하는 경우가 생길것 같다. 레벨깡패라는게 무엇인지 보여주는 게임이지만 이 게임의 최종 보스는 그런거 없다.</p>
 </td>
 </tr>
 <tr>
@@ -150,7 +175,7 @@ padding: 5px;
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 플레이 소감:</p>
+<p> <strong>플레이 소감:</strong><br> 전작 니어 레플리칸트에 이은 니어 시리즈다. 꿈도 희망도 없는 스토리로 유명한 만큼 플레이어의 기대에 맞춰 멘탈을 산산조각 내줄것이다. 5회차까지 플레이해야 비로소 진엔딩을 볼 수 있고 각 회차마다 스토리나 시점이나 엔딩이 다르다는 점을 감안하면 엔딩까지 플레이타임이 긴 편이다. 여러 수집욕도 불러오기 때문에 플레이시간이 추가될 수 있다. 여러 의미로 갓겜.</p>
 </td>
 </tr>
 <tr>
@@ -161,7 +186,7 @@ padding: 5px;
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 플레이 소감:</p>
+<p> <strong>플레이 소감: </strong><br>유일하게 하는 온라인 게임. 첫 시작을 게임패드로 시작해서 PC방에서 플레이할 때 게임패드가 없으면 플레이를 못하는 현실이 슬프다. 한국에서 서비스를 실시할 때부터 지금까지 쭉 해오고 있는 게임. 전형적인 롤플레잉 게임으로 게임 내 주 직업은 탱커로 활약중이다.</p>
 </td>
 </tr>
 </table>
@@ -169,66 +194,66 @@ padding: 5px;
 <hr>
 <hr>
 <article id="thirdsec">
-<h1>인생게임 추천 List<a href="#"> (클릭시 맨 위로 이동)</a></h1>
+<h2>인생게임 추천 List<a href="#"> (클릭시 맨 위로 이동)</a></h2>
 <table id="bestchoice">
-<caption>
+<h4>
 *사진을 누르면 해당 게임의 멀티미디어 관련 자료를 확인할 수 있습니다.
-</caption>
+</h4>
 <tr>
 <th nowrap></th>
 <th nowrap>게임 이름</th>
 <th nowrap>배급사</th>
-<th nowrap>역대 최저가</th>
+<th nowrap>할인 기록 확인</th>
 </tr>
 <tr>
 <td nowrap><a href="http://store.steampowered.com/app/33230/Assassins_Creed_2_Deluxe_Edition/" target="_blank"><img src="Assassin's Creed.jpg"></td>
 <td nowrap>Assassin's Creed<br>시리즈</td>
 <td nowrap>Ubisoft</td>
-<td nowrap>X</td>
+<td nowrap><a href="https://steamdb.info/app/33230/">(링크)</a></td>
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 추천평:</p>
+<p> <strong>추천평:</strong><br> 처음 시작은 암살자로 시작하지만 끝은 나혼자 다 썰어버리는 게임. 이 게임을 플레이하면 이탈리아를 안 가봐도 될 정도로 현실반영을 잘 해놓았다. 그리고 음모론적인 스토리가 정말 매력적인 게임. 후속작으로 가면 갈수록 욕먹고 있는 유비소프트의 어쌔신크리드이지만 2편만큼은 모두가 입을 모아 갓겜이라고 말한다.</p>
 </td>
 </tr>
 <tr>
 <td nowrap><a href="http://store.steampowered.com/app/8870/BioShock_Infinite/" target="_blank"><img src="Bioshock.jpg"></td>
 <td nowrap>Bioshock 시리즈</td>
 <td nowrap>2K Games</td>
-<td nowrap>O</td>
+<td nowrap><a href="https://steamdb.info/app/8870/">(링크)</a></td>
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 추천평:</p>
+<p> <strong>추천평:</strong><br>  마지막 바이오쇼크 인피니티까지 합하면 현재까지 나온게 총 3편. 개인적인 추천은 1편과 2편보다 3편을 하는게 좋을지도 모른다. 1편과 2편은 분위기가 약간 공포스러울 수 있기 때문에 공포분위기를 싫어하는 플레이어라면 3편을 먼저 하는것이 좋겠다. 1편의 배경이 해저도시라 그런지 물 그래픽 구현은 그 당시 정말 최정상 수준이었다. 3편은 하늘도시가 배경이다. 스토리의 반전도 엄청나며 FPS 게임이다. 3D멀미가 있다는 보고가 있어 그런 사람들은 아쉽지만 피해가야 할지도 모른다.</p>
 </td>
 </tr>
 <tr>
 <td nowrap><a href="http://store.steampowered.com/app/228300/Remember_Me/" target="_blank"><img src="RememberMe.jpg"></td>
 <td nowrap>Remember Me</td>
 <td nowrap>Capcom</td>
-<td nowrap>O</td>
+<td nowrap><a href="https://steamdb.info/app/228300/">(링크)</a></td>
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 추천평:</p>
+<p><strong>추천평:</strong><br>누구는 액션이나 타격감이 구려서 이 게임을 저평가하기도 하지만 나는 다르게 생각한다. 이 게임은 스토리와 소재만으로 충분히 추천을 받을만 하다. 오픈월드가 아니고 일직선상의 스토리라인이라는게 좀 아쉽긴 하지만 차기작이 나오거나 DLC가 나온다면 무조건 사야한다고 생각한다. 미래의 프랑스가 배경으로 프랑스에서 만든 게임답게 엄청난 경관을 자랑한다. 이 페이지의 배경 일러스트도 이 게임일러스트를 사용했을 정도이다.</p>
 </td>
 </tr>
 <tr>
 <td nowrap><a href="http://store.steampowered.com/app/107100/Bastion/" target="_blank"><img src="Bastion.jpg"></td>
 <td nowrap>Bastion</td>
 <td nowrap>Warner Bros</td>
-<td nowrap>X</td>
+<td nowrap><a href="https://steamdb.info/app/107100/">(링크)</a></td>
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 추천평:</p>
+<p> <strong>추천평:</strong><br> 담담한 나레이션과 귀를 호강시키는 OST가 일단 한몫하고 들어가는 게임이다. 아기자기한 그래픽으로 보는 눈까지 즐겁게 하지만 난이도는 그렇게 호락호락하지 않다. 전형적인 액션 어드벤처 구조에 롤플레잉 요소를 더함으로써 캐릭터를 성장시키는 재미도 있다. 나레이션 덕분인지 스토리는 어쩐지 처음부터 끝까지 단편적인 느낌이지만 그것 또한 이 게임의 매력이라고 할 수 있다.</p>
 </td>
 </tr>
 </table>
 <hr>
 <hr>
 <article id="fourthsec">
-<h1>나의 기대작<a href="#"> (클릭시 맨 위로 이동)</a></h1>
+<h2>나의 기대작<a href="#"> (클릭시 맨 위로 이동)</a></h2>
 <table id="wishlist">
 <caption>
 *사진을 누르면 해당 게임의 멀티미디어 관련 자료를 확인할 수 있습니다.
@@ -242,29 +267,34 @@ padding: 5px;
 <tr>
 <td nowrap><a href="http://store.steampowered.com/app/601430/The_Evil_Within_2/" target="_blank"><img src="The Evil Within 2.jpg"></td>
 <td nowrap>The Evil Within 2</td>
-<td nowrap>Bethesda Softworks</td>
+<td nowrap>Bethesda<br>Softworks</td>
 <td nowrap><time datetime="2017-10-13">2017년 10월 13일</time></td>
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 왜 이 게임이 탐나는가:</p>
+<p><strong>왜 이 게임이 탐나는가:</strong><br>전작을 플레이했었는데 처음엔 공포물인줄 알았지만 후반으로 가면 갈 수록 액션성이 드러나는 게임이었다. 스토리는 대체 누구 머리에서 나왔는지 궁금할 정도로 기괴하고 고어틱하다. 전작에서 느낀 바로는 가격값하는 플레이타임과 DLC, 중간중간 나오는 퍼즐로 지루함을 덜었고 (사실 지루한 틈도 없이 무서웠지만) 게임에 등장하는 크리쳐 또한 개성적이고 매력적이었다.</p>
 </td>
 </tr>
 <tr>
 <td nowrap><a href="http://store.steampowered.com/app/612880/Wolfenstein_II_The_New_Colossus/" target="_blank"><img src="Wolfenstein 2.jpg"></td>
-<td nowrap>Wolfenstein II: The New Colossus</td>
-<td nowrap>Bethesda Softworks</td>
+<td nowrap>Wolfenstein II:<br> The New Colossus</td>
+<td nowrap>Bethesda<br>Softworks</td>
 <td nowrap><time datetime="2017-10-27">2017년 10월 27일</time></td>
 </tr>
 <tr class="Talking">
 <td colspan="4">
-<p> 왜 이 게임이 탐나는가:</p>
+<p><strong>왜 이 게임이 탐나는가:</strong><br>원래 이 게임은 엄청 오래된 고전게임이나 현대에 맞게 새로운 그래픽을 입혀서 출시되었다. 이것도 전작을 재밌게 플레이했기 때문에 기대중이다. 호쾌한 FPS 게임으로 양 손에 머신건을 들고 적들을 향해 쏠 때의 청량감은 이 게임에서 맛볼수 있는 매력이다. 스토리도 흥미진진하다. 중간중간에 나오는 컷씬은 거의 영화를 보는것과 같은 느낌을 준다. 성우들의 연기도 대단하다고 생각한다.</p>
 </td>
 </tr>
 </table>
 </article>
 </section>
-<footer>Copyright (c) 2017 이용우
-</footer>
+<footer>
+Copyright (c) 2017 이용우
+<br>
+저에 대해서 더 알고 싶으신 분들은 아래로 연락해주시면 감사하겠습니다!
+<br>
+<a href="https://steamcommunity.com/id/dldyddn31/" target="_blank"><img class="steamicon" src="icon_steam.png" height="20px" width="20px" alt="스팀아이콘" title="스팀아이콘"></a> OR <a href="mailto:dldyddn31@naver.com" target="_blank"><img class="mailicon" src="icon_mail.png" height="30px" width="30px" alt="메일아이콘" title="메일아이콘"></a>
+</footer> 
 </body>
 </html>
